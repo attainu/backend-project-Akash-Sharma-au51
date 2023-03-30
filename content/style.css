@@ -1,0 +1,11 @@
+*{
+    background-color: black;
+    font-size:medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.flex-container{
+    display: flex;
+    border-style: solid;
+    border-color: blueviolet;
+    background-color: blueviolet;
+}
