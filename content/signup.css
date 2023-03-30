@@ -1,3 +1,11 @@
-*{
-  
+form{
+    margin: 10%;
+    text-align: center;
+    font-size: 25px;
+    
+}
+#form-box{
+    margin-left: 25%;
+    margin-top: 10%;
+    height: 50%;
 }
