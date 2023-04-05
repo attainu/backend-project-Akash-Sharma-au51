@@ -1,27 +1,21 @@
-const mongoose = require("mongoose");
-
-const passportLocalMongoose = require("passport-local-mongoose");
-
-// create schema
-const orderschema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    unique: true
+const mongoose = require('mongoose')
+const itemschema = new mongoose.Schema({
+  name:{
+    type:String,
+    required:true
   },
-  price: {
-    type: Number,
-    required: true
+  qty:{
+    type:Number,
+    required:true
   },
-  quantity: {
-    type: Number,
-    required: true
+  price:{
+    type:Number,
+    required:true,
   },
-  description: {
-    type: String,
-    default: ''
-  },
-
-});
- 
-module.exports = mongoose.model(order,orderschema);
+  description:{
+    type:String,
+    required:true,
+  }
+})
+const inventory = module.exports('order',itemschema)
+module.exports = inventory
