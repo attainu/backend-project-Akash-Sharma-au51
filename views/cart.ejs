@@ -1,4 +1,4 @@
-{{>header}}
+<%- include('../partials/header.ejs') %>
 
 {{# if this.products }}
 
@@ -137,4 +137,4 @@
             <a class="btn btn-warning return-btn" href="/" role="button">Continue Shopping</a>
         </div>
     </div>
-    {{/if}}
+    <%- include('../partials/footer.ejs') %>
