@@ -1,5 +1,5 @@
 const item = require('./order');
-const new_order = new item([
+const inventory = new item([
     {
      "id": 1,
      "name": "wheat flour",
@@ -25,7 +25,7 @@ const new_order = new item([
      "description": "pure refined sunflower oil "
     }
    ]);
-   new_order.save((err,item)=>{
+   inventory.save((err,item)=>{
     if(err){
         console.error(err);
     }
@@ -34,3 +34,7 @@ const new_order = new item([
         console.log(item)
     }
    });
+   export default inventory;
+
+
+

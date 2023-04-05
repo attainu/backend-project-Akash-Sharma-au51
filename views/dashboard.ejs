@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form" action="/submit" method="post">
-        <label>select a item</label>
+        <label id="item">select a item</label>
         <select>
             <option>wheat flour</option>
             <option>rice</option>
@@ -17,18 +17,12 @@
             <option>thoor daal</option>
             <option>maida flour</option>
         </select>
-        <input type="number" id="products">
+        <input type="number" id="qty">
         <span>kgs</span>
         <input type="submit" id="submit">
     </form>
-    <script>
-        const form = document.querySelector('form')
-        form.addEventListener('submit',(){
-
-        });
-       
-
-    </script>
+    <ul id="input list"></ul>
+    <script src="../form.js"></script>
     
 </body>
 </html>
