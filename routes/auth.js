@@ -28,7 +28,7 @@ router.post("/auth/register", async (req, res) => {
 
         if(registerUser){
             passport.authenticate("local")(req, res, function(){
-                res.redirect('../views/home');
+                res.redirect('../views/dashboard.ejs');
             })
         }
         else{
@@ -54,7 +54,7 @@ router.post("/auth/login", (req, res) => {
         }
         else{
             passport.authenticate("local")(req, res, function(){
-                res.redirect("/views/home")
+                res.redirect("/views/dashboard.ejs")
             })
         }
     })
@@ -65,7 +65,7 @@ router.get("/auth/logout", (req, res) => {
     // using passport to logout
     req.logout(function(err) {
         if (err) { return next(err); }
-    res.redirect('/');
+    res.redirect('../views/signin.ejs');
     })
 })
 

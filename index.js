@@ -1,10 +1,13 @@
 const express = require('express')
-const ejs = require('ejs')
 const app = express();
-app.set('view engine','ejs')
-app.get('/',(req,res)=>{
-    res.render('home')
-})
-app.listen(3000,()=>{
-    console.log("app is running");
+var port = 3000
+
+app.listen(port,(err)=>{
+    if (err) {
+        console.error("internal server error");
+        
+    }
+    else{
+        console.log("server running on ",port);
+    }
 })

@@ -7,19 +7,9 @@ router.use(bodyparser.urlencoded({extended:true}))
 // home 
 router.get('/',(req,res)=>{
     if(req.isAuthenticated()){
-        res.redirect('home');
+        res.redirect('dashboard');
     } else{
-        res.render()
+        res.render('signup')
     }
-})
-
-//form submiting
-router.post('/submit',(req,res)=>{
-    const item = req.body.item
-    const qty = req.body.qty
-
-    //creating order
-    const orders = new orders
-
 })
 
