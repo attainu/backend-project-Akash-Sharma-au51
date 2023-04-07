@@ -35,14 +35,14 @@ app.use(passport.session());
 
 mongoose
   .connect(
-   mongodb://localhost:27017/
+   
   )
   .then(() => console.log("database connected"))
   .catch((err) => console.error(err));
 
 // use route
-app.use("/", authRoute);
-app.use("/", quoteRoute);
+app.use("/", auth);
+app.use("/", cart);
 
 app.listen(3000, () => {
   console.log("Server running at https://ll6ss8-3000.csb.app/");
