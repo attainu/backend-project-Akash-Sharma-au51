@@ -8,8 +8,9 @@ router.post('/signup',validateSignupRequest, isRequestValidated, signup);
 router.post('/signin',validateSigninRequest, isRequestValidated, signin);
 
 
-// router.post('/profile', requireSignin, (req, res) => {
-//     res.status(200).json({ user: 'profile' })
-// });
+
+router.post('/profile', requireSignin, (req, res) => {
+   res.redirect('../views/dashboard.ejs')
+});
 
 module.exports = router;
