@@ -33,10 +33,7 @@ app.use(passport.initialize());
 
 app.use(passport.session());
 
-mongoose
-  .connect(
-   
-  )
+mongoose.connect('mongodb://127.0.0.1:27017/myapp')
   .then(() => console.log("database connected"))
   .catch((err) => console.error(err));
 
